@@ -7,7 +7,7 @@ documentation: "https://github.com/dhananjaylochave-rgb/CSA-Havas-CMP/blob/main/
 versions:
   # Replace REPLACE_WITH_COMMIT_SHA with the commit SHA of the commit that
   # contains the final template.tpl you want published (see guide, step 3).
-  - sha: 596f0595c394153daf1325a754133c68ce093198
+  - sha: c1a060e745713f3629fdca30346f61ad4cc0d211
     changeNotes: |
       Initial release. Consent Mode default-state tag (native per-type
       dropdowns, all types denied on first visit) with an optional loader
