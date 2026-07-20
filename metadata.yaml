@@ -2,8 +2,8 @@
 # - homepage: your organization's/agency's website
 # - documentation: can simply point to this repo's README.md on GitHub
 #   (e.g. https://github.com/<you>/<repo>/blob/main/README.md)
-homepage: "https://your-organization-website.example.com"
-documentation: "https://github.com/<your-github-username>/<your-repo-name>/blob/main/README.md"
+homepage: "https://havasmedianetwork.com/our-services/csa/"
+documentation: "https://github.com/dhananjaylochave-rgb/CSA-Havas-CMP/blob/main/README.md"
 versions:
   # Replace REPLACE_WITH_COMMIT_SHA with the commit SHA of the commit that
   # contains the final template.tpl you want published (see guide, step 3).
