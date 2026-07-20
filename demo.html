@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CMP Demo</title>
+<link rel="stylesheet" href="cmp-banner.css">
+
+<!--
+  In production, all of this (default consent + config + banner load)
+  is handled by the GTM tag built from template.tpl. This demo just
+  mirrors it manually so you can test cmp-banner.js locally without GTM.
+-->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ dataLayer.push(arguments); }
+  gtag('consent', 'default', {
+    'ad_storage': 'denied',
+    'ad_user_data': 'denied',
+    'ad_personalization': 'denied',
+    'analytics_storage': 'denied',
+    'functionality_storage': 'denied',
+    'personalization_storage': 'denied',
+    'security_storage': 'denied',
+    'wait_for_update': 500
+  });
+
+  // Mirrors what the GTM template sets via setInWindow('__cmpConfig', ...)
+  window.__cmpConfig = { cookieName: 'cmp_consent', cookieDays: 180 };
+</script>
+</head>
+<body>
+
+  <h1>CMP demo</h1>
+  <p>Open devtools console to see dataLayer pushes. Open Application → Cookies to see <code>cmp_consent</code>.</p>
+  <p><a href="#" onclick="CMP.open(); return false;">Cookie Settings</a> (simulates a footer link to reopen the banner)</p>
+
+  <script>
+    window.dataLayer.push = (function(orig){
+      return function(){
+        console.log('dataLayer push:', arguments[0]);
+        return orig.apply(window.dataLayer, arguments);
+      };
+    })(window.dataLayer.push);
+  </script>
+
+  <script src="cmp-banner.js"></script>
+
+</body>
+</html>

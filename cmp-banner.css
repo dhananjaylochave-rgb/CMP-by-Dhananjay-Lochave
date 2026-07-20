@@ -1,0 +1,192 @@
+/* CMP BANNER STYLES
+   Minimal bottom bar. Adjust colors/fonts to match the site's own
+   design system — these are deliberately neutral so it doesn't fight
+   with client branding. */
+
+#cmp-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999999;
+  background: #ffffff;
+  color: #1a1a1a;
+  border-top: 1px solid #e2e2e2;
+  box-shadow: 0 -2px 16px rgba(0, 0, 0, 0.08);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  animation: cmp-slide-up 0.25s ease-out;
+}
+
+@keyframes cmp-slide-up {
+  from { transform: translateY(100%); }
+  to { transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #cmp-banner { animation: none; }
+}
+
+.cmp-banner__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.cmp-banner__text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  flex: 1 1 320px;
+}
+
+.cmp-banner__link {
+  color: #1a1a1a;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.cmp-banner__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex: 0 0 auto;
+}
+
+.cmp-btn {
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+
+.cmp-btn:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.cmp-btn--ghost {
+  background: transparent;
+  color: #444;
+  border-color: transparent;
+  text-decoration: underline;
+}
+
+.cmp-btn--outline {
+  background: #ffffff;
+  color: #1a1a1a;
+  border-color: #c9c9c9;
+}
+
+.cmp-btn--solid {
+  background: #1a1a1a;
+  color: #ffffff;
+}
+
+.cmp-btn--outline:hover,
+.cmp-btn--ghost:hover {
+  background: #f4f4f4;
+}
+
+.cmp-btn--solid:hover {
+  background: #333333;
+}
+
+@media (max-width: 520px) {
+  .cmp-banner__inner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cmp-banner__actions {
+    justify-content: stretch;
+  }
+  .cmp-btn {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+/* Expandable "Necessary Only" preferences panel */
+
+.cmp-panel {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px 16px;
+  border-top: 1px solid #eee;
+}
+
+.cmp-panel[hidden] {
+  display: none;
+}
+
+.cmp-panel__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.cmp-panel__close {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+  line-height: 1;
+  color: #555;
+  padding: 4px 8px;
+}
+
+.cmp-panel__close:hover {
+  color: #1a1a1a;
+}
+
+.cmp-panel__close:focus-visible {
+  outline: 2px solid #1a73e8;
+  outline-offset: 2px;
+}
+
+.cmp-panel__body {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 10px 20px;
+  padding-bottom: 12px;
+}
+
+.cmp-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.cmp-check input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  accent-color: #1a1a1a;
+}
+
+.cmp-panel__footer {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (max-width: 520px) {
+  .cmp-panel__body {
+    grid-template-columns: 1fr;
+  }
+  .cmp-panel__footer .cmp-btn {
+    flex: 0 0 auto;
+    width: auto;
+  }
+}
