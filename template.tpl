@@ -19,7 +19,7 @@ ___INFO___
     "ANALYTICS",
     "ADVERTISING"
   ],
-  "description": "",
+  "description": "Sets Google Consent Mode v2 default state (all 7 signals, denied by default) via per-type dropdowns; applies a returning visitor's stored consent from a cookie before the banner loads to avoid a denied-state flash; and optionally injects a self-hosted Accept All / Reject All / Necessary Only consent banner script. Requires configuring the cookie name (must match the get_cookies permission), cookie retention days, and the hosted banner script URL (must match the inject_script permission) before use.",
   "containerContexts": [
     "WEB"
   ]
