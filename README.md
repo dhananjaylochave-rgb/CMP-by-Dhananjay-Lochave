@@ -1,2 +1,2 @@
-# Custom CMP by CSA, HAVAS MEDIA INDIA
+# Custom CMP
 By Dhananjay Lochave, Manager, Digital Analytics
