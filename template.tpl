@@ -13,7 +13,7 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "CSA Havas CMP",
+  "displayName": "CMP by Dhananjay Lochave",
   "categories": [
     "UTILITY",
     "ANALYTICS",
